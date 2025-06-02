@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <title>Form</title>
+</head>
+<body>
+    <div class="root">
+        
+        <div class="form-container">
+            <h1 class="title">Форма регистрации</h1>
+            <form novalidate action="" class="form" name="myForm">
+                <input type="text" name="name" class="name form__input" id="name" placeholder="Введите ваше имя" minlength="2" maxlength="20" required>
+                    <span class="error" id="errorName"></span>
+                <br>
+                <input type="email" name="email" class="email form__input" id="email" placeholder="Введите ваш эмейл" required>
+                    <span class="error" id="errorEmail"></span>
+                <br>
+                <input type="number" name="age" class="age form__input" id="age" placeholder="Укажите возраст" required>
+                    <span class="error" id="errorAge"></span>
+                <br>
+                <fieldset class="radio">
+                    <label for="man">Мужчина</label>
+                    <input type="radio" name="gender" id="man" value="man">                    
+                    <label for="woman">Женщина</label>
+                    <input type="radio" name="gender" id="woman" value="woman">
+                        <span class="error" id="errorRadio"></span>
+                </fieldset>
+                <br>
+                <select name="profession" class="profession form__input" id="profession">
+                    <option value="">Выберите профессию</option>
+                    <option value="Врач">Врач</option>
+                    <option value="Программист">Программист</option>
+                    <option value="Учитель">Учитель</option>
+                    <option value="Дизайнер">Дизайнер</option>
+                    <option value="Инженер">Инженер</option>
+                    <option value="Продавец">Продавец</option>
+                    <option value="Другое">Другое</option>
+                </select>
+                    <span class="error" id="errorProfession"></span>
+                <br>
+                <input type="password" name="password" id="password" class="form__input" placeholder="Введите пароль" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                <span class="error" id="errorPassword"></span>
+                <br>
+                <div class="checkbox">
+                    <label for="agreeTerms">Я согласен с обработкой данных</label>
+                    <input type="checkbox" name="agreeTerms" id="agreeTerms" class="" required>
+                        <span class="error" id="errorAgreeTerms"></span>
+                </div>
+                <br>
+                <button type="submit" id="submitBtn" disabled>Отправить</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="./assets/script/index.js"></script>
+</body>
+</html>
